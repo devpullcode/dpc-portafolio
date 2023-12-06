@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100,300,400;500;700;900&display=swap');
 
 $font-primary: 'Roboto', sans-serif;
 
@@ -39,6 +39,15 @@ $font-sizes: (
     @include font-size($factor);
   }
 }
+
+$font-weight: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
 
 /* ========== others ========== */
 $visibility-values: hidden, visible, collapse;
@@ -121,6 +130,7 @@ $data-maps: (
   flex: $flex,
   flex-direction: $flex-direction,
   justify-content: $justify-content,
+  font-weight: $font-weight,
   align-items: $align-items,
   align-content: $align-content,
   flex-wrap: $flex-wrap,
