@@ -7,13 +7,15 @@ html {
 
 @media (min-width: 62rem) {
   html {
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
 body {
   font-family: v.$font-primary;
   line-height: 1.8;
+
+  padding-top: 3rem;
   background: v.$color-bg;
 }
 
