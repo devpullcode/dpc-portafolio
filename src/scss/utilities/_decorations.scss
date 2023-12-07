@@ -7,6 +7,16 @@
   }
 }
 
+/* ========== grid ========== */
+.grid-container {
+  display: grid;
+  grid-column: 1 / 11;
+  gap: 10px;
+}
+.grid-container--2-cols {
+  grid-template-columns: repeat(8, 1fr) auto auto;
+}
+
 /* ========== wave ========== */
 .u-wave {
   &::after {
