@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+
+.m-profile-links {
+  width: 100%;
+  height: fit-content;
+  padding: 15px 1.6875rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / 9;
+
+  border-radius: 20px;
+  background: v.$color-pure-white-50;
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: v.$color-blue;
+    text-decoration: none;
+    color: v.$color-pure-white;
+
+    &:nth-child(3) {
+      & > img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:last-child {
+      & > span {
+        width: 37px;
+        border-radius: 10px;
+      }
+    }
+  }
+  &__icon {
+    width: 25px;
+    height: 25px;
+  }
+  &__badge-notification {
+    min-width: 20px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 70%;
+
+    border-radius: 50%;
+    background: v.$color-blush;
+  }
+}
