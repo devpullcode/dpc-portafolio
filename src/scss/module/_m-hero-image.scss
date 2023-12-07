@@ -26,11 +26,12 @@
   &__employment-status {
     position: absolute;
     top: 10px;
-    left: 30px;
+    left: 25px;
     margin-left: 0px;
 
     font-size: 11px;
     line-height: 1;
+    color: v.$color-gray;
   }
   &__employment-status::before {
     content: '';
@@ -38,7 +39,7 @@
     width: 10px;
     height: 10px;
     position: absolute;
-    left: -20px;
+    left: -15px;
     top: 0;
 
     border-radius: 50%;
