@@ -1,0 +1,18 @@
+@use '../base/variables' as v;
+
+.m-theme-toggle {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 9 / 11;
+
+  border-radius: 50%;
+  background: v.$color-pure-white-50;
+
+  &__icon {
+    color: v.$color-payne-gray;
+  }
+}
