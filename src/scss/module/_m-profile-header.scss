@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+
+.m-profile-header {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 1.875rem 1.6875rem;
+  grid-column: 1 / 11;
+
+  border-radius: 20px;
+  background: v.$color-pure-white-50;
+
+  &__name {
+    margin: 0;
+
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: map-get(v.$font-weight, black);
+  }
+
+  &__profession {
+    text-align: center;
+    font-weight: map-get(v.$font-weight, thin);
+    font-style: italic;
+  }
+  &__highlight {
+    color: v.$color-turquoise;
+    font-weight: map-get(v.$font-weight, medium);
+  }
+  &__description {
+    text-align: center;
+  }
+  &__wave-emoji {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+  }
+}
