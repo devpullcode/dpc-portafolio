@@ -17,12 +17,18 @@ $color-bg: #e5f1ef;
 $media-query-approach: 'mobile-first';
 
 /* ========== typography ========== */
-$base-font-size: 1rem;
-$ratio: 1.5; // typographic reason "Proporción Áurea"
-
-@mixin font-size($factor) {
-  font-size: calc(#{$base-font-size} * (pow($ratio, $factor)));
+:root {
+  --font-size-document: 16px;
 }
+
+@media (min-width: 48rem) {
+  :root {
+    --font-size-document: 18px;
+  }
+}
+
+$base-font-size: 1rem;
+$ratio: 1.4; // typographic reason
 
 $font-sizes: (
   xs: -3,
@@ -34,11 +40,23 @@ $font-sizes: (
   xxl: 3,
 );
 
-@each $size, $factor in $font-sizes {
-  .font-#{$size} {
-    @include font-size($factor);
-  }
-}
+$font-key-names: (
+  xl: (
+    title,
+  ),
+  lg: (
+    subtitle,
+  ),
+  base: (
+    paragraph,
+  ),
+  md: (
+    caption,
+    minor,
+    highlight,
+    notification-badge,
+  ),
+);
 
 $font-weight: (
   thin: 100,

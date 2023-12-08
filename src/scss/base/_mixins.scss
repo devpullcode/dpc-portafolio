@@ -1,6 +1,42 @@
 @use 'variables' as v;
 @use 'functions' as f;
 
+/* ========== font-sizes ========== */
+@mixin apply-font-size($name) {
+  $found: false;
+
+  @each $key, $font-names in v.$font-key-names {
+    @if index(map-get(v.$font-key-names, $key), $name) {
+      $found: true;
+
+      $calculated-size: calc(#{v.$base-font-size} * #{pow(v.$ratio, map-get(v.$font-sizes, $key))});
+      $font-size: v.$base-font-size * pow(v.$ratio, map-get(v.$font-sizes, $key));
+      @debug $calculated-size;
+      @debug $font-size;
+
+      @if map-get(v.$font-sizes, $key) > 1 {
+        letter-spacing: -0.02em;
+        line-height: $font-size * 1.2;
+      } @else if map-get(v.$font-sizes, $key) == 1 {
+        letter-spacing: 0.05em;
+        line-height: $font-size * 1.2;
+      } @else if map-get(v.$font-sizes, $key) == 0 {
+        letter-spacing: 0.02em;
+        line-height: 1.8;
+      } @else if map-get(v.$font-sizes, $key) < 0 {
+        letter-spacing: 0.02em;
+        line-height: $font-size * 1;
+      }
+
+      font-size: $calculated-size;
+    }
+  }
+
+  @if not $found {
+    @error "Invalid font size name: #{$name}. It must be one of those defined in $font-key-names.";
+  }
+}
+
 /* ========== forms ========== */
 @mixin remove-spin-input() {
   input[type='number'] {
