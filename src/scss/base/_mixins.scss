@@ -2,7 +2,7 @@
 @use 'functions' as f;
 
 /* ========== font-sizes ========== */
-@mixin apply-font-size($name) {
+@mixin apply-font-style($name) {
   $found: false;
 
   @each $key, $font-names in v.$font-key-names {
