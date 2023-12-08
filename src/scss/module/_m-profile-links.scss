@@ -10,7 +10,7 @@
   grid-column: 1 / 9;
 
   border-radius: 20px;
-  background: v.$color-pure-white-50;
+  background: v.$article-bg;
 
   &__link {
     width: 40px;
@@ -21,9 +21,9 @@
     align-items: center;
 
     border-radius: 50%;
-    background: v.$color-blue;
+    background: v.$icon-bg;
     text-decoration: none;
-    color: v.$color-pure-white;
+    color: v.$icon-color;
 
     &:nth-child(3) {
       & > img {
@@ -54,6 +54,7 @@
     left: 70%;
 
     border-radius: 50%;
-    background: v.$color-blush;
+    background: v.$icon-notification-badge-bg;
+    color: v.$icon-notification-badge-color;
   }
 }

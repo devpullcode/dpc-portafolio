@@ -1,22 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$font-primary: 'Roboto';
-
-$color-blue: #1c3041;
-$color-gray: #495967;
-$color-payne-gray: #677d90;
-$color-payne-gray-32: #677d9052;
-$color-blush: #bf6083;
-$color-turquoise: #00d6b3;
-$color-goold: #ffd500;
-$color-pure-white: #ffffff;
-$color-pure-white-50: #ffffff80;
-$color-bg: #e5f1ef;
-
-/* ========== media query approach ========== */
+/* ======================================== */
+/*       media query approach variable      */
+/* ======================================== */
 $media-query-approach: 'mobile-first';
 
-/* ========== typography ========== */
+/* ======================================== */
+/*           color variables                */
+/* ======================================== */
+
+// color palettes
+$color-gold: #ffd500;
+$color-turquoise: #00d6b3;
+$color-blush: #bf6083;
+$color-slate-gray: #677d90;
+$color-payne-gray: #495967;
+$color-prussian-blue: #1c3041;
+$color-white: #ffffff;
+$color-anti-flash: #f2f8f7;
+$color-azure: #e5f1ef;
+$color-payne-gray-32: #677d9052;
+
+// color btns
+$btn-standard-color: $color-white;
+$btn-dark-color: $color-prussian-blue;
+$btn-standard-bg: $color-gold;
+$btn-icon-color: $color-white;
+$btn-icon-bg: $color-payne-gray-32;
+
+// color texts
+$text-title: $color-prussian-blue;
+$text-subtitle: $color-payne-gray;
+$text-paragraph: $color-slate-gray;
+$text-highlight: $color-turquoise;
+$text-caption: $color-prussian-blue;
+$text-minor: $color-slate-gray;
+$text-notification-badge: $color-white;
+$text-color-dark-bg: $color-white;
+
+// color categories
+$category-icon: $color-white;
+$category-label-text: $color-payne-gray;
+$category-bg: $color-payne-gray;
+$category-border: $color-anti-flash;
+
+// color icons
+$icon-color: $color-white;
+$icon-bg: $color-prussian-blue;
+$icon-notification-badge-color: $color-white;
+$icon-notification-badge-bg: $color-blush;
+
+// color tags
+$tag-color: $color-white;
+$tag-bg: $color-prussian-blue;
+
+// status colors
+$status-circle-true: $color-turquoise;
+$status-circle-false: $color-slate-gray;
+
+// color borders
+$border-light: $color-white;
+$border-dark: $color-prussian-blue;
+$border-gray: $color-slate-gray;
+
+// color shapes
+$shape-dark-bg: $color-prussian-blue;
+$shape-light-bg: $color-white;
+
+// other color elements
+$page-bg: $color-azure;
+$article-bg: $color-anti-flash;
+$article-bg-highlight: $color-turquoise;
+$section-bg: $color-prussian-blue;
+
+/* ======================================== */
+/*                typography                */
+/* ======================================== */
+
+$font-primary: 'Roboto';
+$base-font-size-mobile: 16px;
+$base-font-size-desktop: 18px;
+
+// font size
+$font-size-title: 1.96rem;
+$font-size-subtitle: 1.4rem;
+$font-size-paragraph: 1rem;
+$font-size-caption: 0.71429rem;
+$font-size-minor: 0.71429rem;
+$font-size-highlight: 0.71429rem;
+$font-size-notification-badge: 0.71429rem;
+
+// letter spacing
+$letter-spacing-title: -0.0013rem;
+$letter-spacing-subtitle: 1.4rem;
+$letter-spacing-paragraph: 1rem;
+$letter-spacing-caption: 0.8031rem;
+$letter-spacing-minor: 0.8031rem;
+$letter-spacing-highlight: 0.8031rem;
+$letter-spacing-notification-badge: 0.8031rem;
+
+// line height
+$line-height-title: 1.96rem;
+$line-height-subtitle: 1.4rem;
+$line-height-paragraph: 1rem;
+$line-height-caption: 0.71429rem;
+$line-height-minor: 0.71429rem;
+$line-height-highlight: 0.71429rem;
+$line-height-notification-badge: 0.71429rem;
+
 :root {
   --font-size-document: 16px;
 }
@@ -46,6 +137,7 @@ $font-key-names: (
   ),
   lg: (
     subtitle,
+    highlight,
   ),
   base: (
     paragraph,
@@ -53,7 +145,6 @@ $font-key-names: (
   md: (
     caption,
     minor,
-    highlight,
     notification-badge,
   ),
 );
@@ -67,24 +158,33 @@ $font-weight: (
   black: 900,
 );
 
-/* ========== others ========== */
+/* ======================================== */
+/*                  others                  */
+/* ======================================== */
 $visibility-values: hidden, visible, collapse;
 $display-values: block, inline, inline-block;
 $overflow-values: auto, hidden, scroll;
 $position-values: static, relative, absolute, fixed, sticky;
 $hidden-values: none;
 
-/* ========== flex ========== */
+/* ======================================== */
+/*                  flex                    */
+/* ======================================== */
 $flex: (flex);
 $flex-direction: (row, column);
 $justify-content: (flex-start, center, flex-end, space-between, space-around, space-evenly);
 $align-items: (flex-start, center, flex-end, baseline, stretch);
 $align-content: (flex-start, center, flex-end, space-between, space-around, space-evenly, stretch);
 $flex-wrap: (wrap, nowrap, wrap-reverse);
-/* ========== align ========== */
+
+/* ======================================== */
+/*                   align                  */
+/* ======================================== */
 $align-txt-values: (left, center, right, justify);
 
-/* ========== breakpoint ========== */
+/* ======================================== */
+/*                breakpoint                */
+/* ======================================== */
 $breakpoint-code-values: (sm, md, lg, xl, xxl);
 
 $breakpoint-values: (
@@ -100,7 +200,9 @@ $breakpoint-values: (
   // Big monitors, high resolution screens
 );
 
-/* ========== spacing ========== */
+/* ======================================== */
+/*                 spacing                  */
+/* ======================================== */
 $interval-values: (
   0: 0,
   1: 0.25rem,
@@ -117,7 +219,9 @@ $interval-values: (
   12: 5rem,
 );
 
-/* ========== direction ========== */
+/* ======================================== */
+/*                direction                 */
+/* ======================================== */
 $direction-values: (
   't': 'top',
   'r': 'right',
@@ -127,23 +231,24 @@ $direction-values: (
   'y': 'top bottom',
 );
 
-/* ========== opacity ========== */
+/* ======================================== */
+/*                 opacity                  */
+/* ======================================== */
 // prettier-ignore
 $opacity-values: (
-  '0': 0,       // 0%   - Totalmente transparente
+  '0': 0,       // 0%   - completely transparent
   '10': 0.1,    // 10%
   '20': 0.2,    // 20%
   '30': 0.3,    // 30%
   '40': 0.4,    // 40%
-  '50': 0.5,    // 50%  - Semi transparente
+  '50': 0.5,    // 50%  - semi transparent
   '60': 0.6,    // 60%
   '70': 0.7,    // 70%
   '80': 0.8,    // 80%
   '90': 0.9,    // 90%
-  '100': 1      // 100% - Totalmente opaco
+  '100': 1      // 100% - completely opaque
 );
 
-// mapa que contiene todas las listas
 $data-maps: (
   flex: $flex,
   flex-direction: $flex-direction,
