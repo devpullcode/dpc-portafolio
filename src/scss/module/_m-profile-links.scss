@@ -21,9 +21,9 @@
     align-items: center;
 
     border-radius: 50%;
-    background: v.$icon-bg;
+    background: v.$icon-dark-bg;
     text-decoration: none;
-    color: v.$icon-color;
+    color: v.$icon-white-color;
 
     &:nth-child(3) {
       & > img {
