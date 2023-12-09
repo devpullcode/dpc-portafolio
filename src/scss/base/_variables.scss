@@ -10,68 +10,73 @@ $media-query-approach: 'mobile-first';
 /* ======================================== */
 
 // color palettes
-$color-gold: #ffd500;
-$color-turquoise: #00d6b3;
-$color-blush: #bf6083;
-$color-slate-gray: #677d90;
-$color-payne-gray: #495967;
-$color-prussian-blue: #1c3041;
+$color-btn: #ffd500;
+$color-highlight: #00d6b3;
+$color-notification-badge: #bf6083;
+$color-primary: #1c3041;
+$color-inverted-primary: #ffffff;
+$color-bg-primary: #e5f1ef;
+$color-bg-secundary: #f2f8f7;
+$color-gray: #677d90;
+$color-payne-gray: #9aa9b7;
 $color-white: #ffffff;
-$color-anti-flash: #f2f8f7;
-$color-azure: #e5f1ef;
-$color-payne-gray-32: #677d9052;
+$color-dark: #1c3041;
+$color-gray-32: #677d9052;
 
 // color btns
 $btn-standard-color: $color-white;
-$btn-dark-color: $color-prussian-blue;
-$btn-standard-bg: $color-gold;
+$btn-standard-bg: $color-btn;
 $btn-icon-color: $color-white;
-$btn-icon-bg: $color-payne-gray-32;
+$btn-icon-bg: $color-gray-32;
 
 // color texts
-$text-title: $color-prussian-blue;
-$text-subtitle: $color-payne-gray;
-$text-paragraph: $color-slate-gray;
-$text-highlight: $color-turquoise;
-$text-caption: $color-prussian-blue;
-$text-minor: $color-slate-gray;
+$text-title: $color-primary;
+$text-subtitle: $color-primary;
+$text-paragraph: $color-gray;
+$text-highlight: $color-highlight;
+$text-caption: $color-gray;
+$text-minor: $color-payne-gray;
 $text-notification-badge: $color-white;
 $text-color-dark-bg: $color-white;
+$text-color-dark-bg-2: $color-dark;
+$text-color-dark-bg-3: $color-inverted-primary;
 
 // color categories
-$category-icon: $color-white;
-$category-label-text: $color-payne-gray;
-$category-bg: $color-payne-gray;
-$category-border: $color-anti-flash;
+$category-icon: $color-inverted-primary;
+$category-label-text: $color-gray;
+$category-bg: $color-primary;
+$category-border: $color-bg-primary;
 
 // color icons
-$icon-color: $color-white;
-$icon-bg: $color-prussian-blue;
+$icon-color: $color-primary;
+$icon-white-color: $color-white;
+$icon-dark-bg: $color-dark;
 $icon-notification-badge-color: $color-white;
-$icon-notification-badge-bg: $color-blush;
+$icon-notification-badge-bg: $color-notification-badge;
+$icon-theme-toggle: $color-dark;
 
 // color tags
 $tag-color: $color-white;
-$tag-bg: $color-prussian-blue;
+$tag-bg: $color-dark;
 
 // status colors
-$status-circle-true: $color-turquoise;
-$status-circle-false: $color-slate-gray;
+$status-circle-true: $color-highlight;
+$status-circle-false: $color-dark;
 
 // color borders
 $border-light: $color-white;
-$border-dark: $color-prussian-blue;
-$border-gray: $color-slate-gray;
+$border-dark: $color-dark;
+$border-gray: $color-payne-gray;
 
 // color shapes
-$shape-dark-bg: $color-prussian-blue;
-$shape-light-bg: $color-white;
+$shape-circle-bg: $color-highlight;
+$shape-rect-bg: $color-gray-32;
 
 // other color elements
-$page-bg: $color-azure;
-$article-bg: $color-anti-flash;
-$article-bg-highlight: $color-turquoise;
-$section-bg: $color-prussian-blue;
+$page-bg: $color-bg-primary;
+$article-bg: $color-bg-secundary;
+$section-bg: $color-primary;
+$article-highlight-bg: $color-highlight;
 
 /* ======================================== */
 /*                typography                */
