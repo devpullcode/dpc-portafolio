@@ -11,6 +11,7 @@
 
   border-radius: 20px;
   background: var(--article-bg);
+  transition: v.$deafult-transition;
 
   &__link {
     width: 40px;

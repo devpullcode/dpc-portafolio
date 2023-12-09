@@ -10,6 +10,7 @@
 
   border-radius: 20px;
   background: var(--article-bg);
+  transition: v.$deafult-transition;
 
   /* ========== img ========== */
   &__img-container {
@@ -33,6 +34,7 @@
 
     @include m.apply-font-style(minor);
     color: var(--text-minor);
+    transition: v.$deafult-transition;
   }
   &__employment-status::before {
     content: '';
@@ -50,6 +52,7 @@
   &__nickname {
     @include m.apply-font-style(caption);
     text-align: center;
+    transition: v.$deafult-transition;
   }
   &__highlight {
     font-weight: map-get(v.$font-weight, regular);

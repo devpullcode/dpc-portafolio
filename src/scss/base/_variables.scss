@@ -79,6 +79,7 @@ $media-query-approach: 'mobile-first';
   --section-bg: var(--color-primary);
   --article-highlight-bg: var(--color-highlight);
 }
+
 [data-theme='dark'] {
   --color-btn: #ffd500;
   --color-highlight: #00d6b3;
@@ -96,6 +97,8 @@ $media-query-approach: 'mobile-first';
   // idividual
   --icon-theme-toggle: var(--color-white);
 }
+
+$deafult-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 /* ======================================== */
 /*                typography                */
