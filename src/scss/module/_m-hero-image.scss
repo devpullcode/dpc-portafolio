@@ -9,7 +9,7 @@
   grid-column: 1 / 11;
 
   border-radius: 20px;
-  background: v.$article-bg;
+  background: var(--article-bg);
 
   /* ========== img ========== */
   &__img-container {
@@ -32,7 +32,7 @@
     margin-left: 0px;
 
     @include m.apply-font-style(minor);
-    color: v.$text-minor;
+    color: var(--text-minor);
   }
   &__employment-status::before {
     content: '';
@@ -44,7 +44,7 @@
     top: 0;
 
     border-radius: 50%;
-    background-color: v.$status-circle-true;
+    background-color: var(--status-circle-true);
   }
 
   &__nickname {

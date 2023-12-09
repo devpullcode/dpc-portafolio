@@ -9,7 +9,7 @@
   grid-column: 1 / 11;
 
   border-radius: 20px;
-  background: v.$article-bg;
+  background: var(--article-bg);
 
   &__name {
     margin: 0;
