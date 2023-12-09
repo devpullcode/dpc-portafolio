@@ -10,73 +10,92 @@ $media-query-approach: 'mobile-first';
 /* ======================================== */
 
 // color palettes
-$color-btn: #ffd500;
-$color-highlight: #00d6b3;
-$color-notification-badge: #bf6083;
-$color-primary: #1c3041;
-$color-inverted-primary: #ffffff;
-$color-bg-primary: #e5f1ef;
-$color-bg-secundary: #f2f8f7;
-$color-gray: #677d90;
-$color-payne-gray: #9aa9b7;
-$color-white: #ffffff;
-$color-dark: #1c3041;
-$color-gray-32: #677d9052;
+:root {
+  --color-btn: #ffd500;
+  --color-highlight: #00d6b3;
+  --color-notification-badge: #bf6083;
+  --color-primary: #1c3041;
+  --color-inverted-primary: #ffffff;
+  --color-bg-primary: #e5f1ef;
+  --color-bg-secundary: #f2f8f7;
+  --color-gray: #677d90;
+  --color-payne-gray: #9aa9b7;
+  --color-white: #ffffff;
+  --color-dark: #1c3041;
+  --color-gray-32: #677d9052;
 
-// color btns
-$btn-standard-color: $color-white;
-$btn-standard-bg: $color-btn;
-$btn-icon-color: $color-white;
-$btn-icon-bg: $color-gray-32;
+  // color btns
+  --btn-standard-color: var(--color-white);
+  --btn-standard-bg: var(--color-btn);
+  --btn-icon-color: var(--color-white);
+  --btn-icon-bg: var(--color-gray-32);
 
-// color texts
-$text-title: $color-primary;
-$text-subtitle: $color-primary;
-$text-paragraph: $color-gray;
-$text-highlight: $color-highlight;
-$text-caption: $color-gray;
-$text-minor: $color-payne-gray;
-$text-notification-badge: $color-white;
-$text-color-dark-bg: $color-white;
-$text-color-dark-bg-2: $color-dark;
-$text-color-dark-bg-3: $color-inverted-primary;
+  // color texts
+  --text-title: var(--color-primary);
+  --text-subtitle: var(--color-primary);
+  --text-paragraph: var(--color-gray);
+  --text-highlight: var(--color-highlight);
+  --text-caption: var(--color-gray);
+  --text-minor: var(--color-payne-gray);
+  --text-notification-badge: var(--color-white);
+  --text-color-dark-bg: var(--color-white);
+  --text-color-dark-bg-2: var(--color-dark);
+  --text-color-dark-bg-3: var(--color-inverted-primary);
 
-// color categories
-$category-icon: $color-inverted-primary;
-$category-label-text: $color-gray;
-$category-bg: $color-primary;
-$category-border: $color-bg-primary;
+  // color categories
+  --category-icon: var(--color-inverted-primary);
+  --category-label-text: var(--color-gray);
+  --category-bg: var(--color-primary);
+  --category-border: var(--color-bg-primary);
 
-// color icons
-$icon-color: $color-primary;
-$icon-white-color: $color-white;
-$icon-dark-bg: $color-dark;
-$icon-notification-badge-color: $color-white;
-$icon-notification-badge-bg: $color-notification-badge;
-$icon-theme-toggle: $color-dark;
+  // color icons
+  --icon-color: var(--color-primary);
+  --icon-white-color: var(--color-white);
+  --icon-dark-bg: var(--color-dark);
+  --icon-notification-badge-color: var(--color-white);
+  --icon-notification-badge-bg: var(--color-notification-badge);
+  --icon-theme-toggle: var(--color-dark);
 
-// color tags
-$tag-color: $color-white;
-$tag-bg: $color-dark;
+  // color tags
+  --tag-color: var(--color-white);
+  --tag-bg: var(--color-dark);
 
-// status colors
-$status-circle-true: $color-highlight;
-$status-circle-false: $color-dark;
+  // status colors
+  --status-circle-true: var(--color-highlight);
+  --status-circle-false: var(--color-dark);
 
-// color borders
-$border-light: $color-white;
-$border-dark: $color-dark;
-$border-gray: $color-payne-gray;
+  // color borders
+  --border-light: var(--color-white);
+  --border-dark: var(--color-dark);
+  --border-gray: var(--color-payne-gray);
 
-// color shapes
-$shape-circle-bg: $color-highlight;
-$shape-rect-bg: $color-gray-32;
+  // color shapes
+  --shape-circle-bg: var(--color-highlight);
+  --shape-rect-bg: var(--color-gray-32);
 
-// other color elements
-$page-bg: $color-bg-primary;
-$article-bg: $color-bg-secundary;
-$section-bg: $color-primary;
-$article-highlight-bg: $color-highlight;
+  // other color elements
+  --page-bg: var(--color-bg-primary);
+  --article-bg: var(--color-bg-secundary);
+  --section-bg: var(--color-primary);
+  --article-highlight-bg: var(--color-highlight);
+}
+[data-theme='dark'] {
+  --color-btn: #ffd500;
+  --color-highlight: #00d6b3;
+  --color-notification-badge: #bf6083;
+  --color-primary: #ffffff;
+  --color-inverted-primary: #1c3041;
+  --color-bg-primary: #0c151c;
+  --color-bg-secundary: #111e28;
+  --color-gray: #ffffff;
+  --color-payne-gray: #acbac3;
+  --color-white: #ffffff;
+  --color-dark: #1c3041;
+  --color-gray-32: #677d9052;
+
+  // idividual
+  --icon-theme-toggle: var(--color-white);
+}
 
 /* ======================================== */
 /*                typography                */

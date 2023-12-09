@@ -18,45 +18,45 @@
         line-height: $font-size * 1.2;
         font-weight: map-get(v.$font-weight, black);
         margin-bottom: 12px;
-        color: v.$text-title;
+        color: var(--text-title);
       }
       @if $name == 'subtitle' {
         letter-spacing: 0.05em;
         line-height: $font-size * 1;
         font-weight: map-get(v.$font-weight, light);
         margin-bottom: $font-size * 1.4;
-        color: v.$text-subtitle;
+        color: var(--text-subtitle);
       }
       @if $name == 'paragraph' {
         letter-spacing: 0.02em;
         line-height: 1.7;
         font-weight: map-get(v.$font-weight, regular);
         margin-bottom: $font-size * 1;
-        color: v.$text-paragraph;
+        color: var(--text-paragraph);
       }
       @if $name == 'caption' {
         letter-spacing: 0.02em;
         line-height: $font-size * 1;
         font-weight: map-get(v.$font-weight, medium);
-        color: v.$text-caption;
+        color: var(--text-caption);
       }
       @if $name == 'minor' {
         letter-spacing: 0.02em;
         line-height: $font-size * 1;
         font-weight: map-get(v.$font-weight, light);
-        color: v.$text-minor;
+        color: var(--text-minor);
       }
       @if $name == 'highlight' {
         letter-spacing: 0.02em;
         line-height: $font-size * 1;
         font-weight: map-get(v.$font-weight, medium);
-        color: v.$text-highlight;
+        color: var(--text-highlight);
       }
       @if $name == 'notification-badge' {
         letter-spacing: 0.02em;
         line-height: $font-size * 1;
         font-weight: map-get(v.$font-weight, medium);
-        color: v.$text-notification-badge;
+        color: var(--text-notification-badge);
       }
     }
   }
