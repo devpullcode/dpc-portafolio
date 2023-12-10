@@ -32,6 +32,7 @@
   }
   &__icon-header {
     color: var(--category-icon);
+    font-size: 16px;
     transition: v.$deafult-transition;
   }
   &__title-header {
@@ -42,6 +43,7 @@
     transform: translateX(calc(100% + 10px)) translateY(45%);
 
     font-weight: 500;
+    font-size: 16px;
     line-height: 1;
     color: var(--category-label-text);
     transition: v.$deafult-transition;

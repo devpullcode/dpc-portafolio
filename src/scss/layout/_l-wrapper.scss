@@ -1,5 +1,7 @@
 .l-wrapper {
   max-width: 1024px;
-  width: 90%;
   margin-inline: auto;
+  width: 90%;
+  display: grid;
+  gap: 10px;
 }

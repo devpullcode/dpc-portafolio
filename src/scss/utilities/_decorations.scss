@@ -4,6 +4,9 @@
 .icon-light-theme {
   filter: grayscale(1) brightness(0) invert(1);
 }
+.icon-dark-theme {
+  filter: grayscale(1) brightness(1) invert(1);
+}
 
 /* ========== color txt ========== */
 .u-txt {
