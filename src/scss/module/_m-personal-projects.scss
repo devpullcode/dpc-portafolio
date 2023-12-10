@@ -1,0 +1,136 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.m-personal-projects {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 70px 27px 30px 27px;
+  grid-column: 1 / 11;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  /* ======================================== */
+  /*                  header                  */
+  /* ======================================== */
+  &__article-header {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 19px;
+
+    border-radius: 50%;
+    border: 3px solid var(--category-border);
+    background-color: var(--category-bg);
+    transition: v.$deafult-transition;
+  }
+  &__icon-header {
+    color: var(--category-icon);
+    font-size: 16px;
+    transition: v.$deafult-transition;
+  }
+  &__title-header {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(calc(100% + 10px)) translateY(45%);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--category-label-text);
+    transition: v.$deafult-transition;
+  }
+
+  /* ======================================== */
+  /*                   body                   */
+  /* ======================================== */
+  &__article-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    align-items: center;
+  }
+
+  /* ========== card ========== */
+  &__card {
+    width: 303px;
+    height: 203px;
+    position: relative;
+
+    border-radius: 10px;
+    background: var(--section-bg);
+    transition: v.$deafult-transition;
+    overflow: hidden;
+  }
+  &__card-img > img {
+    display: block;
+    height: 163px;
+    object-fit: cover;
+    object-position: 0px 70%;
+  }
+
+  /* ========== footer ========== */
+  &__card-footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem;
+
+    color: var(--text-color-dark-bg-3);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    transition: v.$deafult-transition;
+  }
+  &__card-item-footer {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0.3125rem;
+      height: 0.3125rem;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) translateX(calc(-100% + -5px));
+
+      border-radius: 50%;
+      background: var(--text-color-dark-bg-3);
+      transition: v.$deafult-transition;
+    }
+  }
+
+  /* ========== icon ========== */
+  &__card-icon {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 14px;
+    right: 14px;
+
+    text-decoration: none;
+    color: var(--btn-icon-color);
+    border-radius: 50%;
+    background-color: var(--btn-icon-bg);
+
+    &:nth-last-of-type(2) {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      top: 42px;
+    }
+  }
+}
