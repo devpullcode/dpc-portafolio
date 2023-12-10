@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.m-computer-languages {
+.m-development-software {
   width: 100%;
   height: auto;
   position: relative;
@@ -32,7 +32,7 @@
   }
   &__icon-header {
     color: var(--category-icon);
-    font-size: 12px;
+    font-size: 16px;
     transition: v.$deafult-transition;
   }
   &__title-header {
@@ -55,21 +55,16 @@
   &__article-body {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
+    align-items: center;
   }
-  &__icon-body {
-    width: 30px;
-    height: 30px;
+  &__article-tag {
+    padding: 0 0.625rem;
 
-    font-size: 30px;
-    color: var(--icon-color);
-    transition: v.$deafult-transition;
-
-    &:nth-child(4) {
-      width: 34px;
-      height: 34px;
-    }
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--tag-color);
+    background-color: var(--tag-bg);
   }
 }

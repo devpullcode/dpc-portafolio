@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.m-computer-languages {
+.m-serialization {
   width: 100%;
   height: auto;
   position: relative;
@@ -55,21 +55,23 @@
   &__article-body {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
+    align-items: center;
   }
-  &__icon-body {
-    width: 30px;
-    height: 30px;
+  &__article-tag {
+    padding: 0 0.625rem;
 
-    font-size: 30px;
-    color: var(--icon-color);
-    transition: v.$deafult-transition;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--tag-color);
+    background-color: var(--tag-bg);
 
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
     &:nth-child(4) {
-      width: 34px;
-      height: 34px;
+      text-transform: uppercase;
     }
   }
 }
