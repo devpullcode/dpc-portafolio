@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>devpullcode</title>
+
+    <script>
+      // check local storage
+      const localS = localStorage.getItem('theme');
+      let themeToSet = localS;
+
+      if (!localS) {
+        themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('theme')) return;
+
+        themeToSet = e.matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = themeToSet;
+      });
+
+      document.documentElement.dataset.theme = themeToSet;
+    </script>
 
     <link rel="stylesheet" href="build/css/fontawesome.css" />
     <link rel="stylesheet" href="build/css/normalize.css" />
