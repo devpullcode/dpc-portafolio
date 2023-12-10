@@ -14,6 +14,8 @@
         themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const computerLanguagesIcon1 = document.querySelector('.m-computer-languages__icon-body:nth-child(4)');
+        const computerLanguagesIcon2 = document.querySelector('.m-computer-languages__icon-body:last-child');
         const iconTheme = document.querySelector('.m-theme-toggle__icon');
 
         if (localStorage.getItem('theme')) return;
@@ -25,6 +27,10 @@
           themeToSet = 'light';
           iconTheme.classList = 'fa-solid fa-moon fa-2xl m-theme-toggle__icon';
         }
+
+        computerLanguagesIcon1.classList.toggle('icon-light-theme');
+        computerLanguagesIcon2.classList.toggle('icon-light-theme');
+
         document.documentElement.dataset.theme = themeToSet;
       });
 
