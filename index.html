@@ -14,9 +14,17 @@
         themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const iconTheme = document.querySelector('.m-theme-toggle__icon');
+
         if (localStorage.getItem('theme')) return;
 
-        themeToSet = e.matches ? 'dark' : 'light';
+        if (e.matches) {
+          themeToSet = 'dark';
+          iconTheme.classList = 'fa-solid fa-sun fa-2xl m-theme-toggle__icon';
+        } else {
+          themeToSet = 'light';
+          iconTheme.classList = 'fa-solid fa-moon fa-2xl m-theme-toggle__icon';
+        }
         document.documentElement.dataset.theme = themeToSet;
       });
 
@@ -55,10 +63,10 @@
         <div class="grid-container grid-container--2-cols">
           <article class="m-profile-links">
             <a href="" class="m-profile-links__link" aria-label="logo linkedin" target="_blank">
-              <i class="fa-brands fa-linkedin-in fa-lg"></i>
+              <i class="fa-brands fa-linkedin-in m-profile-links__icon"></i>
             </a>
             <a href="https://github.com/devpullcode" class="m-profile-links__link" aria-label="logo github" target="_blank">
-              <i class="fa-brands fa-github fa-lg"></i>
+              <i class="fa-brands fa-github m-profile-links__icon"></i>
               <span class="m-profile-links__badge-notification">6</span>
             </a>
             <a href="https://www.frontendmentor.io/profile/devpullcode" class="m-profile-links__link" target="_blank">
@@ -66,7 +74,7 @@
               <span class="m-profile-links__badge-notification">5</span>
             </a>
             <a href="https://codepen.io/devpullcode" class="m-profile-links__link" aria-label="logo codepen" target="_blank">
-              <i class="fa-brands fa-codepen fa-lg"></i>
+              <i class="fa-brands fa-codepen m-profile-links__icon"></i>
               <span class="m-profile-links__badge-notification">1</span>
             </a>
             <a href="https://www.codewars.com/users/devpullcode" class="m-profile-links__link" aria-label="logo codewars" target="_blank">
@@ -76,7 +84,7 @@
           </article>
 
           <article class="m-theme-toggle">
-            <i class="fa-solid fa-moon fa-2xl m-theme-toggle__icon"></i>
+            <i class="fa-solid fa-sun fa-2xl m-theme-toggle__icon"></i>
           </article>
         </div>
       </header>
