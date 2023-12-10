@@ -11,8 +11,10 @@
 
   border-radius: 50%;
   background: var(--article-bg);
+  transition: v.$deafult-transition;
 
   &__icon {
     color: var(--icon-theme-toggle);
+    transition: v.$deafult-transition;
   }
 }
