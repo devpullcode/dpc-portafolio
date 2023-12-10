@@ -16,6 +16,7 @@
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         const computerLanguagesIcon1 = document.querySelector('.m-computer-languages__icon-body:nth-child(4)');
         const computerLanguagesIcon2 = document.querySelector('.m-computer-languages__icon-body:last-child');
+        const frontendMentorIconH = document.querySelector('.m-frontend-mentor__icon-header');
         const iconTheme = document.querySelector('.m-theme-toggle__icon');
 
         if (localStorage.getItem('theme')) return;
@@ -30,18 +31,18 @@
 
         computerLanguagesIcon1.classList.toggle('icon-light-theme');
         computerLanguagesIcon2.classList.toggle('icon-light-theme');
+        frontendMentorIconH.classList.toggle('icon-dark-theme');
 
         document.documentElement.dataset.theme = themeToSet;
       });
 
       document.documentElement.dataset.theme = themeToSet;
     </script>
+    <script src="build/js/main.js" defer></script>
 
     <link rel="stylesheet" href="build/css/fontawesome.css" />
     <link rel="stylesheet" href="build/css/normalize.css" />
     <link rel="stylesheet" href="build/css/main.css" />
-
-    <script src="build/js/main.js" defer></script>
   </head>
   <body>
     <div class="l-wrapper">
