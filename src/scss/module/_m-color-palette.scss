@@ -1,0 +1,45 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.m-color-palette {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 70px 27px 70px 27px;
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / 11;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  &__color {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: 3px solid var(--color-inverted-primary);
+
+    &:nth-child(1) {
+      background-color: var(--color-btn);
+    }
+    &:nth-child(2) {
+      background-color: var(--color-highlight);
+      // transform: translateX(-50%);
+      margin-left: -30px;
+    }
+    &:nth-child(3) {
+      background-color: var(--color-notification-badge);
+      margin-left: -30px;
+    }
+    &:nth-child(4) {
+      background-color: var(--color-payne-gray);
+      margin-left: -30px;
+    }
+    &:nth-child(5) {
+      background-color: var(--color-primary);
+      margin-left: -30px;
+    }
+  }
+}
