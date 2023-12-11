@@ -33,8 +33,8 @@
 .grid-template--1-1auto-cols {
   grid-template-columns: repeat(1, 1fr) auto;
 }
-.grid-template--20-70-cols {
-  grid-template-columns: repeat(1, 20%) 70%;
+.grid-template--70-auto-cols {
+  grid-template-columns: repeat(1, 70px) auto;
 }
 
 /* ========== wave ========== */
