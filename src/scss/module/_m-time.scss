@@ -12,7 +12,7 @@
 
   border-radius: 20px;
   @include m.apply-font-style(title);
-  font-size: 4.375rem;
+  font-size: 2rem;
   background: var(--article-bg);
   transition: v.$deafult-transition;
 }
