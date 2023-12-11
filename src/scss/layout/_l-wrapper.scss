@@ -2,6 +2,8 @@
   max-width: 1024px;
   margin-inline: auto;
   width: 90%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  height: auto;
 }
