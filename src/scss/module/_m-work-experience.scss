@@ -4,9 +4,8 @@
 .m-work-experience {
   width: 100%;
   height: auto;
-  position: relative;
   padding: 15px 20px;
-
+  position: relative;
   grid-column: 1 / 11;
 
   border-radius: 20px;
@@ -22,36 +21,39 @@
   }
   &__title-highlight {
     @include m.apply-font-style(subtitle);
+    font-style: italic;
     color: var(--text-color-dark-bg-2);
     line-height: 1;
-    font-style: italic;
   }
   &__info {
     height: fit-content;
     display: flex;
+
     @include m.apply-font-style(title);
     font-size: 5rem;
-    letter-spacing: 0.4rem;
     color: var(--text-color-dark-bg);
+    letter-spacing: 0.4rem;
   }
   &__info-number {
     line-height: 1;
   }
   &__info-txt {
-    text-transform: uppercase;
-    transform: rotate(-90deg) translateX(5%);
     font-size: 1.2rem;
+    text-transform: uppercase;
     text-align: center;
     line-height: 1;
+    transform: rotate(-90deg) translateX(5%);
   }
   &__subtitle {
     margin-top: 8px;
-    color: var(--text-color-dark-bg-2);
+
     font-size: 22px;
+    color: var(--text-color-dark-bg-2);
     line-height: 1;
   }
   &__txt {
-    color: var(--text-color-dark-bg);
     font-size: 14px;
+    color: var(--text-color-dark-bg);
+    line-height: 20px;
   }
 }
