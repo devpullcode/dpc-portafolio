@@ -1,0 +1,72 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.m-about-me {
+  width: 100%;
+  height: auto;
+  padding: 70px 27px 30px 27px;
+  position: relative;
+  grid-column: 1 / 11;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  /* ======================================== */
+  /*                  header                  */
+  /* ======================================== */
+  &__article-header {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 19px;
+
+    border-radius: 50%;
+    border: 3px solid var(--category-border);
+    background-color: var(--category-bg);
+    transition: v.$deafult-transition;
+  }
+  &__icon-header {
+    color: var(--category-icon);
+    font-size: 12px;
+    transition: v.$deafult-transition;
+  }
+  &__title-header {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--category-label-text);
+    transition: v.$deafult-transition;
+    transform: translateX(calc(100% + 10px)) translateY(45%);
+  }
+
+  /* ======================================== */
+  /*                   body                   */
+  /* ======================================== */
+  &__article-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include m.apply-font-style(paragraph);
+  }
+  &__paragraph {
+    margin-bottom: 10px;
+  }
+  &__wave-emoji {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+  }
+}
