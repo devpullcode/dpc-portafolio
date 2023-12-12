@@ -6,7 +6,9 @@
   height: auto;
   position: relative;
   padding: 70px 27px 30px 27px;
-  grid-column: 1 / 11;
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
@@ -53,9 +55,12 @@
   /*                   body                   */
   /* ======================================== */
   &__article-body {
+    max-width: 330px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     gap: 30px;
   }

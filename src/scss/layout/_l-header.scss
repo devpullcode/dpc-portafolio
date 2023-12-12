@@ -5,4 +5,32 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px;
+
+  &__grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 11;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__grid-2  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 2;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      grid-template-rows: auto 1fr;
+      grid-column: 2 / 3;
+    }
+  }
+  &__grid-3 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column: 1 / 2;
+    gap: 10px;
+  }
 }
