@@ -4,9 +4,13 @@
 .m-frontend-mentor {
   width: 100%;
   height: auto;
-  position: relative;
   padding: 70px 27px 30px 27px;
-  grid-column: 1 / 11;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
@@ -57,8 +61,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
     gap: 24px;
     align-items: center;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   /* ========== card ========== */

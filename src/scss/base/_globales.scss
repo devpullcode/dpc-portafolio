@@ -9,7 +9,8 @@ body {
   font-family: v.$font-primary;
   line-height: 1.8;
 
-  padding-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background: var(--page-bg);
   transition: v.$deafult-transition;
 }

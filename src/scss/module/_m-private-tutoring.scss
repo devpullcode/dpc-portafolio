@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.m-work-experience {
+.m-private-tutoring {
   width: 100%;
   height: auto;
   padding: 15px 20px;
@@ -11,6 +11,16 @@
   border-radius: 20px;
   background: var(--color-highlight);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 
   &__title {
     width: min-content;
@@ -36,6 +46,7 @@
   }
   &__info-number {
     line-height: 1;
+    letter-spacing: 0;
   }
   &__info-txt {
     font-size: 1.2rem;

@@ -6,7 +6,7 @@
   height: fit-content;
   position: relative;
   padding: 1.875rem 1.6875rem;
-  grid-column: 1 / 11;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
@@ -19,6 +19,10 @@
     text-transform: uppercase;
     text-align: center;
     transition: v.$deafult-transition;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
   }
 
   &__profession {
@@ -26,6 +30,10 @@
     text-align: center;
     font-style: italic;
     transition: v.$deafult-transition;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
   }
   &__highlight {
     @include m.apply-font-style(highlight);
@@ -35,6 +43,11 @@
     margin-bottom: 0;
     text-align: center;
     transition: v.$deafult-transition;
+    text-wrap: pretty;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
   }
   &__wave-emoji {
     position: absolute;
