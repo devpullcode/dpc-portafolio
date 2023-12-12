@@ -6,12 +6,20 @@
   height: auto;
   padding: 70px 27px 30px 27px;
   position: relative;
-  grid-column: 1 / 11;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
   transition: v.$deafult-transition;
 
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-column: 2 / 3;
+  }
+
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
   /* ======================================== */
   /*                  header                  */
   /* ======================================== */

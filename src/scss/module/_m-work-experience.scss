@@ -6,7 +6,7 @@
   height: auto;
   padding: 15px 20px;
   position: relative;
-  grid-column: 1 / 11;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--color-highlight);
@@ -52,6 +52,7 @@
     line-height: 1;
   }
   &__txt {
+    max-width: 250px;
     font-size: 14px;
     color: var(--text-color-dark-bg);
     line-height: 20px;

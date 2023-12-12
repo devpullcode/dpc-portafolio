@@ -6,11 +6,21 @@
   height: auto;
   padding: 15px 20px;
   position: relative;
-  grid-column: 1 / 11;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--color-highlight);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 
   &__title {
     width: min-content;
@@ -53,6 +63,7 @@
     line-height: 1;
   }
   &__txt {
+    max-width: 250px;
     font-size: 14px;
     color: var(--text-color-dark-bg);
     line-height: 20px;

@@ -6,11 +6,18 @@
   height: auto;
   padding: 70px 27px 30px 27px;
   position: relative;
-  grid-column: 1 / 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    height: 100%;
+  }
 
   /* ======================================== */
   /*                  header                  */
