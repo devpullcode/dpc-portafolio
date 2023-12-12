@@ -20,6 +20,7 @@
 
     border-radius: 50%;
     border: 3px solid var(--color-inverted-primary);
+    transition: v.$deafult-transition;
 
     &:nth-child(1) {
       background-color: var(--color-btn);
