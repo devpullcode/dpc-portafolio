@@ -4,13 +4,25 @@
 .m-development-software {
   width: 100%;
   height: auto;
-  position: relative;
   padding: 70px 27px 30px 27px;
-  grid-column: 1 / 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-row: 1 / 3;
+  }
+
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
 
   /* ======================================== */
   /*                  header                  */
@@ -53,11 +65,12 @@
   /*                   body                   */
   /* ======================================== */
   &__article-body {
+    max-width: 480px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    align-items: center;
   }
   &__article-tag {
     padding: 0 0.625rem;

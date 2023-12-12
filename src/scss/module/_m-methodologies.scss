@@ -4,13 +4,25 @@
 .m-methodologies {
   width: 100%;
   height: auto;
-  position: relative;
   padding: 70px 27px 30px 27px;
-  grid-column: 1 / 11;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 2;
 
   border-radius: 20px;
   background: var(--article-bg);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 
   /* ======================================== */
   /*                  header                  */
