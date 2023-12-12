@@ -9,10 +9,21 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  grid-column: 2 / 3;
 
   border-radius: 20px;
   @include m.apply-font-style(title);
   font-size: 2rem;
   background: var(--article-bg);
   transition: v.$deafult-transition;
+
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    padding: 0 30px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }
