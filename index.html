@@ -18,17 +18,8 @@
         const computerLanguagesIcon1 = document.querySelector('.m-computer-languages__icon-body:nth-child(4)');
         const computerLanguagesIcon2 = document.querySelector('.m-computer-languages__icon-body:last-child');
         const frontendMentorIconH = document.querySelector('.m-frontend-mentor__icon-header');
-        const iconTheme = document.querySelector('.m-theme-toggle__icon');
 
         if (localStorage.getItem('theme')) return;
-
-        if (e.matches) {
-          themeToSet = 'dark';
-          iconTheme.classList = 'fa-solid fa-sun fa-2xl m-theme-toggle__icon';
-        } else {
-          themeToSet = 'light';
-          iconTheme.classList = 'fa-solid fa-moon fa-2xl m-theme-toggle__icon';
-        }
 
         computerLanguagesIcon1.classList.toggle('icon-light-theme');
         computerLanguagesIcon2.classList.toggle('icon-light-theme');
@@ -95,7 +86,8 @@
               </article>
 
               <article class="m-theme-toggle">
-                <i class="fa-solid fa-sun fa-2xl m-theme-toggle__icon"></i>
+                <i class="fa-solid fa-sun fa-2xl m-theme-toggle__icon m-theme-toggle__icon--sun"></i>
+                <i class="fa-solid fa-moon fa-2xl m-theme-toggle__icon m-theme-toggle__icon--moon"></i>
               </article>
             </div>
 
