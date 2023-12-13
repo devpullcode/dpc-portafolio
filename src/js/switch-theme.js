@@ -47,7 +47,10 @@
 
     // set local storage
     localStorage.setItem('theme', newTheme);
+
+    switchIconTheme();
   };
 
   document.querySelector('.m-theme-toggle').addEventListener('click', switchTheme);
+  switchIconTheme();
 })();
