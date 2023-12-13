@@ -1,0 +1,67 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.m-profile-header {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 1.875rem 1.6875rem;
+  grid-column: 1 / 2;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  &__name {
+    margin: 0;
+
+    @include m.apply-font-style(title);
+    text-transform: uppercase;
+    text-align: center;
+    transition: v.$deafult-transition;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
+  }
+  @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+    &__last-name {
+      display: none;
+    }
+  }
+  @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+    &__last-name {
+      display: block;
+    }
+  }
+
+  &__profession {
+    @include m.apply-font-style(subtitle);
+    text-align: center;
+    font-style: italic;
+    transition: v.$deafult-transition;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
+  }
+  &__highlight {
+    @include m.apply-font-style(highlight);
+  }
+  &__description {
+    @include m.apply-font-style(paragraph);
+    margin-bottom: 0;
+    text-align: center;
+    transition: v.$deafult-transition;
+    text-wrap: pretty;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      text-align: left;
+    }
+  }
+  &__wave-emoji {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+  }
+}

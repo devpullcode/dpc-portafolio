@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.m-hero-image {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 1.875rem 1.6875rem;
+  grid-column: 1 / 11;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  /* ========== img ========== */
+  &__img-container {
+    width: 76px;
+    margin-top: 1.1875rem;
+    margin-bottom: 8px;
+    margin-inline: auto;
+  }
+  &__img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 0px rgba(28, 48, 65, 0.16);
+  }
+
+  /* ========== text ========== */
+
+  &__employment-status {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    margin-left: 0px;
+
+    @include m.apply-font-style(minor);
+    color: var(--text-minor);
+    transition: v.$deafult-transition;
+  }
+  &__employment-status::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -15px;
+    top: 0;
+
+    border-radius: 50%;
+    background-color: var(--status-circle-true);
+  }
+
+  &__nickname {
+    @include m.apply-font-style(caption);
+    text-align: center;
+    transition: v.$deafult-transition;
+  }
+  &__highlight {
+    font-weight: map-get(v.$font-weight, regular);
+  }
+}

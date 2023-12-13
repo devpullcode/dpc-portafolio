@@ -1,0 +1,67 @@
+@use '../base/variables' as v;
+
+.l-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+
+  gap: 10px;
+
+  &__grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 11;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  &__grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 2;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'lg')) {
+      grid-column: 2 / 3;
+    }
+  }
+  &__grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 2;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+    }
+  }
+  &__grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / 11;
+    gap: 10px;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__grid-5 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+  &__grid-6 {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: map-get(v.$breakpoint-values, 'md')) {
+      flex-direction: column-reverse;
+    }
+
+    gap: 10px;
+  }
+}

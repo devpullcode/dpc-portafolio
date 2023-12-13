@@ -1,0 +1,66 @@
+@use '../base/variables' as v;
+
+.m-profile-links {
+  width: 100%;
+  height: fit-content;
+  padding: 15px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--icon-dark-bg);
+    text-decoration: none;
+    color: var(--icon-white-color);
+
+    &:nth-child(3) {
+      & > img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &:last-child {
+      & > span {
+        width: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__badge-notification {
+    min-width: 12px;
+    height: 12px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 70%;
+
+    font-size: 0.5rem;
+    border-radius: 50%;
+    background: var(--icon-notification-badge-bg);
+    color: var(--icon-notification-badge-color);
+  }
+}

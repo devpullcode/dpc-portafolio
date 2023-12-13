@@ -27,8 +27,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 /* ========== CSS ========== */
 const compilerCSS = () => {
   return gulp
-    .src('node_modules/normalize.css/normalize.css', { allowEmpty: true })
-    .pipe(gulp.src('src/scss/main.scss'))
+    .src('src/scss/main.scss')
     .pipe(gulpIf(!isProduction, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -39,7 +38,7 @@ const compilerCSS = () => {
 // prettier-ignore
 const processNormalizeCss = () => {
   return gulp
-  .src('build/css/normalize.css', { allowEmpty: true })
+  .src('node_modules/normalize.css/normalize.css', { allowEmpty: true })
   .pipe(appendText('*,*::after,*::before {margin: 0;padding: 0;box-sizing: border-box;}'))
   .pipe(gulp.dest('build/css'));
 };

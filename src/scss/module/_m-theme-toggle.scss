@@ -1,0 +1,30 @@
+@use '../base/variables' as v;
+
+.m-theme-toggle {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  background: var(--article-bg);
+  transition: v.$deafult-transition;
+
+  &__icon {
+    color: var(--icon-theme-toggle);
+    transition: v.$deafult-transition;
+  }
+}
+
+.m-theme-toggle__icon {
+  display: none;
+}
+
+[data-theme='light'] .m-theme-toggle__icon--sun {
+  display: block;
+}
+[data-theme='dark'] .m-theme-toggle__icon--moon {
+  display: block;
+}

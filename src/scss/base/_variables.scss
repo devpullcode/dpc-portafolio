@@ -1,28 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$font-primary: 'Roboto', sans-serif;
-
-$color-blue: #1c3041;
-$color-gray: #495967;
-$color-payne-gray: #677d90;
-$color-payne-gray-32: #677d9052;
-$color-blush: #bf6083;
-$color-turquoise: #00d6b3;
-$color-goold: #ffd500;
-$color-pure-white: #ffffff;
-$color-pure-white-50: #ffffff80;
-$color-bg: #f2f8f7;
-
-/* ========== media query approach ========== */
+/* ======================================== */
+/*       media query approach variable      */
+/* ======================================== */
 $media-query-approach: 'mobile-first';
 
-/* ========== typography ========== */
-$base-font-size: 1rem;
-$ratio: 1.5; // typographic reason "Proporción Áurea"
+/* ======================================== */
+/*           color variables                */
+/* ======================================== */
 
-@mixin font-size($factor) {
-  font-size: calc(#{$base-font-size} * (pow($ratio, $factor)));
+// color palettes
+:root {
+  --color-btn: #ffd500;
+  --color-highlight: #00d6b3;
+  --color-notification-badge: #bf6083;
+  --color-primary: #1c3041;
+  --color-inverted-primary: #ffffff;
+  --color-bg-primary: #e5f1ef;
+  --color-bg-secundary: #f2f8f7;
+  --color-gray: #677d90;
+  --color-payne-gray: #9aa9b7;
+  --color-white: #ffffff;
+  --color-dark: #1c3041;
+  --color-gray-32: #677d9052;
+
+  // color btns
+  --btn-standard-color: var(--color-white);
+  --btn-standard-bg: var(--color-btn);
+  --btn-icon-color: var(--color-white);
+  --btn-icon-bg: var(--color-gray-32);
+
+  // color texts
+  --text-title: var(--color-primary);
+  --text-subtitle: var(--color-primary);
+  --text-paragraph: var(--color-gray);
+  --text-highlight: var(--color-highlight);
+  --text-caption: var(--color-gray);
+  --text-minor: var(--color-payne-gray);
+  --text-notification-badge: var(--color-white);
+  --text-color-dark-bg: var(--color-white);
+  --text-color-dark-bg-2: var(--color-dark);
+  --text-color-dark-bg-3: var(--color-inverted-primary);
+
+  // color categories
+  --category-icon: var(--color-inverted-primary);
+  --category-label-text: var(--color-gray);
+  --category-bg: var(--color-primary);
+  --category-border: var(--color-bg-primary);
+
+  // color icons
+  --icon-color: var(--color-primary);
+  --icon-white-color: var(--color-white);
+  --icon-dark-bg: var(--color-dark);
+  --icon-notification-badge-color: var(--color-white);
+  --icon-notification-badge-bg: var(--color-notification-badge);
+  --icon-theme-toggle: var(--color-dark);
+
+  // color tags
+  --tag-color: var(--color-white);
+  --tag-bg: var(--color-dark);
+
+  // status colors
+  --status-circle-true: var(--color-highlight);
+  --status-circle-false: var(--color-dark);
+
+  // color borders
+  --border-light: var(--color-white);
+  --border-dark: var(--color-dark);
+  --border-gray: var(--color-payne-gray);
+
+  // color shapes
+  --shape-circle-bg: var(--color-highlight);
+  --shape-rect-bg: var(--color-gray-32);
+
+  // other color elements
+  --page-bg: var(--color-bg-primary);
+  --article-bg: var(--color-bg-secundary);
+  --section-bg: var(--color-primary);
+  --article-highlight-bg: var(--color-highlight);
 }
+
+[data-theme='dark'] {
+  --color-btn: #ffd500;
+  --color-highlight: #00d6b3;
+  --color-notification-badge: #bf6083;
+  --color-primary: #ffffff;
+  --color-inverted-primary: #1c3041;
+  --color-bg-primary: #0c151c;
+  --color-bg-secundary: #111e28;
+  --color-gray: #8c9fac;
+  --color-payne-gray: #acbac3;
+  --color-white: #ffffff;
+  --color-dark: #1c3041;
+  --color-gray-32: #677d9052;
+
+  // idividual
+  --icon-theme-toggle: var(--color-white);
+}
+
+$deafult-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, fill 0.3s ease-in-out, transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+/* ======================================== */
+/*                typography                */
+/* ======================================== */
+
+$font-primary: 'Roboto';
+$base-font-size-mobile: 16px;
+$base-font-size-desktop: 18px;
+
+// font size
+$font-size-title: 1.96rem;
+$font-size-subtitle: 1.4rem;
+$font-size-paragraph: 1rem;
+$font-size-caption: 0.71429rem;
+$font-size-minor: 0.71429rem;
+$font-size-highlight: 0.71429rem;
+$font-size-notification-badge: 0.71429rem;
+
+// letter spacing
+$letter-spacing-title: -0.0013rem;
+$letter-spacing-subtitle: 1.4rem;
+$letter-spacing-paragraph: 1rem;
+$letter-spacing-caption: 0.8031rem;
+$letter-spacing-minor: 0.8031rem;
+$letter-spacing-highlight: 0.8031rem;
+$letter-spacing-notification-badge: 0.8031rem;
+
+// line height
+$line-height-title: 1.96rem;
+$line-height-subtitle: 1.4rem;
+$line-height-paragraph: 1rem;
+$line-height-caption: 0.71429rem;
+$line-height-minor: 0.71429rem;
+$line-height-highlight: 0.71429rem;
+$line-height-notification-badge: 0.71429rem;
+
+:root {
+  --font-size-document: 16px;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --font-size-document: 18px;
+  }
+}
+
+$base-font-size: 1rem;
+$ratio: 1.4; // typographic reason
 
 $font-sizes: (
   xs: -3,
@@ -34,30 +158,60 @@ $font-sizes: (
   xxl: 3,
 );
 
-@each $size, $factor in $font-sizes {
-  .font-#{$size} {
-    @include font-size($factor);
-  }
-}
+$font-key-names: (
+  xl: (
+    title,
+  ),
+  lg: (
+    subtitle,
+    highlight,
+  ),
+  base: (
+    paragraph,
+  ),
+  md: (
+    caption,
+    minor,
+    notification-badge,
+  ),
+);
 
-/* ========== others ========== */
+$font-weight: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
+
+/* ======================================== */
+/*                  others                  */
+/* ======================================== */
 $visibility-values: hidden, visible, collapse;
 $display-values: block, inline, inline-block;
 $overflow-values: auto, hidden, scroll;
 $position-values: static, relative, absolute, fixed, sticky;
 $hidden-values: none;
 
-/* ========== flex ========== */
+/* ======================================== */
+/*                  flex                    */
+/* ======================================== */
 $flex: (flex);
 $flex-direction: (row, column);
 $justify-content: (flex-start, center, flex-end, space-between, space-around, space-evenly);
 $align-items: (flex-start, center, flex-end, baseline, stretch);
 $align-content: (flex-start, center, flex-end, space-between, space-around, space-evenly, stretch);
 $flex-wrap: (wrap, nowrap, wrap-reverse);
-/* ========== align ========== */
+
+/* ======================================== */
+/*                   align                  */
+/* ======================================== */
 $align-txt-values: (left, center, right, justify);
 
-/* ========== breakpoint ========== */
+/* ======================================== */
+/*                breakpoint                */
+/* ======================================== */
 $breakpoint-code-values: (sm, md, lg, xl, xxl);
 
 $breakpoint-values: (
@@ -73,7 +227,9 @@ $breakpoint-values: (
   // Big monitors, high resolution screens
 );
 
-/* ========== spacing ========== */
+/* ======================================== */
+/*                 spacing                  */
+/* ======================================== */
 $interval-values: (
   0: 0,
   1: 0.25rem,
@@ -90,7 +246,9 @@ $interval-values: (
   12: 5rem,
 );
 
-/* ========== direction ========== */
+/* ======================================== */
+/*                direction                 */
+/* ======================================== */
 $direction-values: (
   't': 'top',
   'r': 'right',
@@ -100,27 +258,29 @@ $direction-values: (
   'y': 'top bottom',
 );
 
-/* ========== opacity ========== */
+/* ======================================== */
+/*                 opacity                  */
+/* ======================================== */
 // prettier-ignore
 $opacity-values: (
-  '0': 0,       // 0%   - Totalmente transparente
+  '0': 0,       // 0%   - completely transparent
   '10': 0.1,    // 10%
   '20': 0.2,    // 20%
   '30': 0.3,    // 30%
   '40': 0.4,    // 40%
-  '50': 0.5,    // 50%  - Semi transparente
+  '50': 0.5,    // 50%  - semi transparent
   '60': 0.6,    // 60%
   '70': 0.7,    // 70%
   '80': 0.8,    // 80%
   '90': 0.9,    // 90%
-  '100': 1      // 100% - Totalmente opaco
+  '100': 1      // 100% - completely opaque
 );
 
-// mapa que contiene todas las listas
 $data-maps: (
   flex: $flex,
   flex-direction: $flex-direction,
   justify-content: $justify-content,
+  font-weight: $font-weight,
   align-items: $align-items,
   align-content: $align-content,
   flex-wrap: $flex-wrap,
