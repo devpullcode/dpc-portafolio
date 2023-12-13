@@ -18,23 +18,15 @@
         const computerLanguagesIcon1 = document.querySelector('.m-computer-languages__icon-body:nth-child(4)');
         const computerLanguagesIcon2 = document.querySelector('.m-computer-languages__icon-body:last-child');
         const frontendMentorIconH = document.querySelector('.m-frontend-mentor__icon-header');
-        const iconTheme = document.querySelector('.m-theme-toggle__icon');
 
         if (localStorage.getItem('theme')) return;
-
-        if (e.matches) {
-          themeToSet = 'dark';
-          iconTheme.classList = 'fa-solid fa-sun fa-2xl m-theme-toggle__icon';
-        } else {
-          themeToSet = 'light';
-          iconTheme.classList = 'fa-solid fa-moon fa-2xl m-theme-toggle__icon';
-        }
 
         computerLanguagesIcon1.classList.toggle('icon-light-theme');
         computerLanguagesIcon2.classList.toggle('icon-light-theme');
         frontendMentorIconH.classList.toggle('icon-dark-theme');
 
         document.documentElement.dataset.theme = themeToSet;
+        switchIconTheme();
       });
 
       document.documentElement.dataset.theme = themeToSet;
@@ -63,7 +55,7 @@
 
         <div class="l-header__grid-1">
           <article class="m-profile-header">
-            <h1 class="m-profile-header__name">Jose Antonio <br />González Santos</h1>
+            <h1 class="m-profile-header__name">Jose Antonio <span class="m-profile-header__last-name">González Santos</span></h1>
             <h2 class="m-profile-header__profession"><span class="m-profile-header__highlight">FullStack</span> developer</h2>
             <p class="m-profile-header__description">Frontend developer especializado en JavaScript, con conocimiento en HTML, CSS y TypeScript. Apasionado por la resolución creativa de problemas y participante activo en Frontend Mentor y GitHub.</p>
             <span class="m-profile-header__wave-emoji" aria-label="Mano saludando">👋</span>
@@ -94,7 +86,8 @@
               </article>
 
               <article class="m-theme-toggle">
-                <i class="fa-solid fa-sun fa-2xl m-theme-toggle__icon"></i>
+                <i class="fa-solid fa-sun fa-2xl m-theme-toggle__icon m-theme-toggle__icon--sun"></i>
+                <i class="fa-solid fa-moon fa-2xl m-theme-toggle__icon m-theme-toggle__icon--moon"></i>
               </article>
             </div>
 
@@ -458,7 +451,7 @@
               </div>
             </article>
 
-            <article class="m-time">12:40</article>
+            <article class="m-time"><span class="m-time-hour"></span> <span class="m-time-colon">:</span> <span class="m-time-minute"></span></article>
           </div>
 
           <article class="m-contact">
@@ -491,11 +484,11 @@
                 <span class="m-contact__item-value">Linkedin</span>
               </li>
               <li class="m-contact__item">
-                <img src="build/img/svg/logo-tusclasesparticulares_v3.svg" class="m-contact__item-icon m-contact__item-icon--img" alt="Icono superprof" />
+                <img src="build/img/svg/logo-tusclasesparticulares-light.svg" class="m-contact__item-icon m-contact__item-icon--img" alt="Icono superprof" />
                 <span class="m-contact__item-value">Tus clases particulares</span>
               </li>
               <li class="m-contact__item">
-                <img src="build/img/svg/logo-superprof.svg" class="m-contact__item-icon m-contact__item-icon--img" alt="Icono superprof" />
+                <img src="build/img/svg/logo-superprof-light.svg" class="m-contact__item-icon m-contact__item-icon--img" alt="Icono superprof" />
                 <span class="m-contact__item-value">Superprof</span>
               </li>
             </ul>

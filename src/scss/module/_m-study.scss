@@ -84,6 +84,7 @@
 
       border-radius: 10px;
       background-color: var(--shape-rect-bg);
+      transition: v.$deafult-transition;
       transform: translateX(-50%);
     }
   }
@@ -96,6 +97,7 @@
     text-align: center;
     letter-spacing: 1.4px;
     color: var(--text-subtitle);
+    transition: v.$deafult-transition;
   }
   &__shape-circle {
     width: 12px;
@@ -104,6 +106,7 @@
 
     border-radius: 50%;
     background: var(--shape-circle-bg);
+    transition: v.$deafult-transition;
   }
   &__card-date-range,
   &__card-city {
@@ -115,6 +118,7 @@
     text-align: center;
     letter-spacing: 1.4px;
     color: var(--text-subtitle);
+    transition: v.$deafult-transition;
   }
   &__card-description {
     max-width: 300px;
@@ -127,5 +131,6 @@
     text-wrap: pretty;
     letter-spacing: 1.4px;
     color: var(--text-paragraph);
+    transition: v.$deafult-transition;
   }
 }
