@@ -45,8 +45,11 @@ jobs:
       - name: Update source/img path in index.html
         run: sed -i 's|srcset="build/img/|srcset="img/|' build/index.html
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          github_token: ${{ secrets.MY_GITHUB_PAT }}
-          publish_dir: ./build
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: /public/
