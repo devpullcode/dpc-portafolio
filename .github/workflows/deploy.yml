@@ -33,7 +33,7 @@ jobs:
       - name: Update fontawesome.css path in index.html
         run: sed -i 's|href="build/css/fontawesome.css"|href="css/fontawesome.css"|' build/index.html
 
-      - name: Update imgs path in index.html
+      - name: Update normalize path in index.html
         run: sed -i 's|href="build/css/normalize.css"|href="css/normalize.css"|' build/index.html
 
       - name: Update script paths in index.html
