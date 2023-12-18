@@ -8,6 +8,6 @@ const switchDisableBtn = (status, classElements) => {
 };
 
 window.addEventListener('load', () => {
-  const classNamesDisableBTN = ['m-contact__item-value']; // indicate the classes of the elements to deactivate the hover.
+  const classNamesDisableBTN = ['m-contact__item-value', 'm-profile-links__link']; // indicate the classes of the elements to deactivate the hover.
   if (navigator.maxTouchPoints > 0) switchDisableBtn(true, classNamesDisableBTN);
 });
