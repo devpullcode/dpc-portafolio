@@ -121,8 +121,8 @@
 
   /* ========== icon ========== */
   &__card-icon {
-    width: 23px;
-    height: 23px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -139,7 +139,7 @@
       transform: rotate(-45deg);
     }
     &:last-child {
-      top: 42px;
+      top: 50px;
     }
   }
 }
